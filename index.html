@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee ID Entry</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url(/image/Artboard.png);
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+    }
+
+    .container {
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    
+    }
+
+    .logo {
+      max-width: 200px;
+      margin: 0 auto 20px;
+      margin-top: -8px;
+    }
+
+
+    h1 {
+      font-size: 34px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+    }
+
+    input {
+      width: 80%;
+      max-width: 300px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      text-align: center;
+      outline: none;
+    }
+
+
+
+  
+
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    input:focus {
+      border-bottom: 2px solid #ffdd99;
+    }
+
+    @media (max-width: 768px) {
+    
+
+      input {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/image/logo1.png" alt="Slam Dunk Logo" class="logo">
+    <h1>ENTER EMP <br> ID HERE</h1>
+    <form action="/submit" method="post">
+      <input type="text" name="emp_id" placeholder="" required>
+      <button type="submit" class="button-24" role="button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
