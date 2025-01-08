@@ -4,7 +4,12 @@
       {
         "src": "/",
         "dest": "/api/index.js"
+      },
+      {
+        "src": "/submit",
+        "dest": "/api/index.js"
       }
+      
     ]
   }
   
