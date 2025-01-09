@@ -43,7 +43,7 @@
 
         .seat-number {
             position: absolute;
-            top: 18%;
+            top: 27%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
@@ -74,6 +74,13 @@
             margin-top: 20px;
         }
 
+        .seatNoo{
+           
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold; 
+            color: white;
+        }
+
         @media (max-width:786px) {
             .seat-number {
                 padding: 0.5rem 0;
@@ -86,7 +93,9 @@
 <body>
     <div class="card">
         <div style="position: relative; display: inline-block;">
+            <h1 class="seatNoo">Table No.</h1>
             <img src="/image/j.png" alt="Chair Image" class="img-fluid">
+            
             <div class="seat-number">
                 <%= numberOF %>
             </div>
