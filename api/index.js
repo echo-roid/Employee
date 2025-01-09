@@ -20,8 +20,8 @@ function getSeatNumber(employeeId) {
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
     const data = xlsx.utils.sheet_to_json(sheet);
     for (const row of data) {
-        if (row.EmpCode == employeeId) {
-            return row.SeatNo;
+        if (row.EMIP == employeeId) {
+            return [row.No,row.Seat];
         }
     }
     return null;
@@ -35,15 +35,22 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
     const employeeId = req.body.emp_id;
     const seatNumber = getSeatNumber(employeeId);
-
-    if (seatNumber) {
-        res.render('seat', { seatNumber });
+     if (seatNumber[0]) {
+        if(seatNumber[1] === "Chair"){
+            const numberOF =seatNumber[0] 
+            res.render('seat', { numberOF});
+        }
+        else{
+            const numberOF =seatNumber[0] 
+            res.render('table', { numberOF});
+        }
+       
     } else {
-        res.send(`
-            <h1 style="text-align:center; color:red;">Invalid Employee ID</h1>
-            <a href="/" style="display:block; text-align:center; margin-top:20px;">Go Back</a>
-        `);
-    }
+         res.send(`
+             <h1 style="text-align:center; color:red;">Invalid Employee ID</h1>
+             <a href="/" style="display:block; text-align:center; margin-top:20px;">Go Back</a>
+         `);
+ }
 });
 
 // Start the server
