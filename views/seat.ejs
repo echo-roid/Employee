@@ -70,6 +70,16 @@
             color: white;
         }
 
+        .seatNoo{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold; 
+            color: white;
+        }
+
         .divName{
             margin-top: 20px;
         }
@@ -87,7 +97,9 @@
 <body>
     <div class="card">
         <div style="position: relative; display: inline-block;">
+            
             <img src="/image/imagechair.png" alt="Chair Image" class="img-fluid">
+            <h1 class="seatNoo">Seat No.</h1>
             <div class="seat-number">
                 <%= numberOF %>
             </div>
