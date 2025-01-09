@@ -35,17 +35,20 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
     const employeeId = req.body.emp_id;
     const seatNumber = getSeatNumber(employeeId);
+    console.log(seatNumber)
      if (seatNumber[0]) {
         if(seatNumber[1] === "Chair"){
-            const numberOF =seatNumber[0] 
-            const numberOFname =seatNumber[3] 
-            res.render('seat', { numberOF,numberOFname});
-        }
-        else{
-            const numberOF =seatNumber[0] 
-            const numberOFname =seatNumber[3] 
-            res.render('table', { numberOF,numberOFname});
-        }
+            const numberOF = seatNumber[0]
+            const numberOFPerson = seatNumber[2]
+            res.render('seat', { numberOF,numberOFPerson});
+          
+         }
+         else{
+            const numberOF = seatNumber[0]
+            const numberOFPerson = seatNumber[2]
+             res.render('table', {numberOF,numberOFPerson});
+             
+         }
        
     } else {
          res.send(`
