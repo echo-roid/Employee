@@ -21,7 +21,7 @@ function getSeatNumber(employeeId) {
     const data = xlsx.utils.sheet_to_json(sheet);
     for (const row of data) {
         if (row.EMIP == employeeId) {
-            return [row.No,row.Seat];
+            return [row.No,row.Seat,row.EmpName];
         }
     }
     return null;
@@ -38,11 +38,13 @@ app.post('/submit', (req, res) => {
      if (seatNumber[0]) {
         if(seatNumber[1] === "Chair"){
             const numberOF =seatNumber[0] 
-            res.render('seat', { numberOF});
+            const numberOFname =seatNumber[3] 
+            res.render('seat', { numberOF,numberOFname});
         }
         else{
             const numberOF =seatNumber[0] 
-            res.render('table', { numberOF});
+            const numberOFname =seatNumber[3] 
+            res.render('table', { numberOF,numberOFname});
         }
        
     } else {

@@ -64,6 +64,17 @@
             justify-content: center;
         }
 
+
+        .name{
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold; 
+        }
+
+        .divName{
+            margin-top: 30px;
+        }
+
+
         @media (max-width:786px) {
             .seat-number {
                 padding: 0.5rem 0;
@@ -79,6 +90,11 @@
             <img src="/image/imagechair.png" alt="Chair Image" class="img-fluid">
             <div class="seat-number">
                 <%= numberOF %>
+            </div>
+
+
+            <div class="divName">
+                <h1 class="name"><%= numberOFname %></h1>
             </div>
         </div>
     </div>
