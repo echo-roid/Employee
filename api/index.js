@@ -35,7 +35,6 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
     const employeeId = req.body.emp_id;
     const seatNumber = getSeatNumber(employeeId);
-    console.log(seatNumber)
      if (seatNumber[0]) {
         if(seatNumber[1] === "Chair"){
             const numberOF = seatNumber[0]
